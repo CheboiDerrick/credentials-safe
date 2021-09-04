@@ -10,3 +10,9 @@
     def remove_user(self):
         User.users_list.remove(self)
         
+    @classmethod
+    def user_login(cls,username,password):
+        for user in cls.users_list:
+            if user.username==username and user.password==password:
+                return True
+
