@@ -12,7 +12,11 @@ class Credential:
         Credential.credentials_list.remove(self)
 
     @classmethod
-    def display_credentials(self,sitename):
+    def display_credentials(cls,sitename):
         for credential in Credential.credentials_list:
             if credential.sitename==sitename:
                 return credential
+
+    @classmethod
+    def displayall_credentials(cls):
+        return  cls.credentials_list
