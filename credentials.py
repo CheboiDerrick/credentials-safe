@@ -5,4 +5,6 @@ class Credential:
         self.username=username
         self.password=password
 
+    def add_credential(self):
+        Credential.sitename.append(self)
     
