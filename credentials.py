@@ -11,5 +11,8 @@ class Credential:
     def remove_credential(self):
         Credential.credentials_list.remove(self)
 
-   
-    
+    @classmethod
+    def display_credentials(self,sitename):
+        for credential in Credential.credentials_list:
+            if credential.sitename==sitename:
+                return credential
