@@ -27,22 +27,5 @@
         '''
         User.users_list.remove(self)
         
-    @classmethod
-    def user_exist(cls,username):
-        '''
-        Method that takes in a username returns true if it matches a user in the users_list.
-
-        Args:
-            username: username of the user being searched
-        Returns :
-            Contact of person that matches the number.
-        '''
-        for user in cls.users_list:
-            if user.username==username:
-                return True
-
-    def correct_password(cls,password):
-        for user in cls.users_list:
-            if user.password==password:
-                return True
+    
 
