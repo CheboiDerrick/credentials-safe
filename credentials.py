@@ -6,5 +6,10 @@ class Credential:
         self.password=password
 
     def add_credential(self):
-        Credential.sitename.append(self)
+        Credential.credentials_list.append(self)
+
+    def remove_credential(self):
+        Credential.credentials_list.remove(self)
+
+   
     
