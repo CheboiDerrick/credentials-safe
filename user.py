@@ -6,4 +6,7 @@
     
     def add_user(self):
         User.users_list.append(self)
+
+    def remove_user(self):
+        User.users_list.remove(self)
         
