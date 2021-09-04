@@ -1,3 +1,5 @@
+import random
+import string
 class Credential:
     credentials_list=[]
     def __init__(self,sitename,username,password):
@@ -12,11 +14,18 @@ class Credential:
         Credential.credentials_list.remove(self)
 
     @classmethod
-    def display_credentials(cls,sitename):
+    def find_credential(cls,sitename):
         for credential in Credential.credentials_list:
             if credential.sitename==sitename:
                 return credential
 
+    def generate_password(size=10, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+        '''
+        Function to generate an 8 character password for a credential
+        '''
+        random_pass=''.join(random.choice(char) for _ in range(size))
+        return random_pass
+
     @classmethod
-    def displayall_credentials(cls):
+    def display_credentials(cls):
         return  cls.credentials_list
