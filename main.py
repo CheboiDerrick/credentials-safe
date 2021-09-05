@@ -13,3 +13,17 @@ def save_user(user):
 	Function to save a new user account
 	'''
 	User.add_user(user)
+
+def verify_user(username,password):
+	'''
+	Function that verifies the existance of the user before creating credentials
+	'''
+	checking_user = Credential.user_auth(username,password)
+	return checking_user
+
+def generate_password():
+	'''
+	Function to generate a password automatically
+	'''
+	gen_pass = Credential.generate_password()
+	return gen_pass
