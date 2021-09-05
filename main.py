@@ -46,3 +46,29 @@ def display_credentials(username):
 	Function to display credentials belonging to a user user
 	'''
 	return Credential.display_credentials(username)
+
+def main():
+	print(' ')
+	print('Welcome to the credentials safe. \n This is your dashboard')
+	while True:
+		print(' ')
+		print("*"*60)
+		print('Enter a code below to manage  application: \n na-Create New Account \n li-Log In \n ex-Exit')
+		short_code = input('Enter a code: ').lower().strip()
+        
+		if short_code == 'ex':
+			break
+
+        elif short_code == 'na':
+            print("-"*60)
+            print(' ')
+            print('To create a new account:')
+            username = input('Enter your first name - ').strip()
+            password = input('Enter your password - ').strip()
+            save_user(create_user(username,password))
+            print(" ")
+            print(f'New Account Created for: {username}. Your password is: {password}. Keep it safe for you will need it for subsequent logins')
+
+
+if __name__ == '__main__':
+	main()
