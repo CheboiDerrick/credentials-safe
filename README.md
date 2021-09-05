@@ -3,7 +3,7 @@
 ## By [Derrick Cheboi](https://github.com/CheboiDerrick/)
 
 ## Description
-Credential safe is a terminal run python application enables a user to save their credentials for different sites in their accounts. A single user has a safe where their credentials are stored and protected by a password.
+Credential safe is a terminal run python application that enables a user to save their credentials for different sites in their safes (accounts). A single user has a safe (account) where their credentials are stored and protected by a password.
 
 ## Application Behaviour
 These are the behaviours/features that the application implements for use by a user.
@@ -11,7 +11,8 @@ These are the behaviours/features that the application implements for use by a u
 A user should be able to:
 * Create an account with their details - username and password
 * Store their existing login credentials
-* Generate a password for a new credential/account
+* Generate a password  or enter their own password for a new credential/account
+* View all the credentials stored in their safe.
 
 ## Specifications
 | Behaviour | Input | Output |
