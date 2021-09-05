@@ -43,9 +43,15 @@ def save_credential(credential):
 
 def display_credentials(username):
 	'''
-	Function to display credentials belonging to a user user
+	Function to display credentials belonging to the current user
 	'''
 	return Credential.display_credentials(username)
+
+def delete_credential(sitename):
+    '''
+	Function to delete a specific credential belonging to the current user
+	'''
+    return Credential.delete_credential(sitename)
 
 def main():
 	print(' ')
@@ -130,8 +136,9 @@ def main():
 							print(' ')
 							print("There are no credentials saved with this account. Create a credential first")
 							print(' ')
+
 					else:
-						print('Oops! Wrong option entered. Try again.')
+						print('Unrecognised short code. Kindly check and try again')
 
 			else: 
 				print(' ')

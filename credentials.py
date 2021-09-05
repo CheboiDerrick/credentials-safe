@@ -18,7 +18,7 @@ class Credential():
         Args:
             username: username of the user being searched
         Returns :
-            Contact of person that matches the number.
+            User whose credentials match the entered credentials.
         '''
         for user in User.users_list:
             if (user.username == username and user.password == password):
@@ -51,3 +51,10 @@ class Credential():
             if credential.user_name == username:
                 user_credentials_list.append(credential)
         return user_credentials_list
+
+    @classmethod
+    def delete_credential(cls,sitename):
+        for credential in Credential.credentials_list:
+            if credential.sitename==sitename:
+                Credential.credentials_list.remove(credential)
+                return credential
