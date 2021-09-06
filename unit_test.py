@@ -141,5 +141,6 @@ class TestCredential(unittest.TestCase):
             # return active_user
         self.assertEqual(active_user,Credential.user_auth(user2.username,user2.password))
 
+
 if __name__ == '__main__':
     unittest.main()

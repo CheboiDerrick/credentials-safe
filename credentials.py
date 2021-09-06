@@ -56,5 +56,6 @@ class Credential():
     def delete_credential(cls,sitename):
         for credential in Credential.credentials_list:
             if credential.sitename==sitename:
+                message=f'Your {credential.sitename} of username {credential.account_name} and password {credential.password} has been successfully deleted'
                 Credential.credentials_list.remove(credential)
-                return credential
+                return message
